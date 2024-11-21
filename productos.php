@@ -123,7 +123,12 @@ $sql = $conexion->query("SELECT id, codigo, nombre, categoriaPrincipal, categori
             <td><?= $datos->categoriaSecundaria ?></td>
             <td><?= $datos->descripcion ?></td>
             <td><?= $datos->precio ?></td>
-            <td><?= $datos->stock ?></td>
+            <?php
+        if($datos->stock  == 0){?>
+            <td class="table-danger"><?= $datos->stock ?></td>
+        <?php }else{?>
+            <td class="table-success"><?= $datos->stock ?></td>
+            <?php }?>
             <td><?= $datos->detalle ?></td>
             <td><?= $datos->caracteristicas ?></td>
             <td><?= $datos->garantia ?></td>
