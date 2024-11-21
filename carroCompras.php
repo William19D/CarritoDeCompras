@@ -156,7 +156,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['btnGuardar'])) {
                 <td><?= $datos->subtotal ?></td>
                 <td><?= $datos->total ?></td>
                 <td>
-                    <a href="actualizar.php?id=<?= $datos->id ?>" class="btn btn-small btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a href="actualizarCarro.php?id=<?= $datos->id ?>" class="btn btn-small btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>
                     <a href="eliminar/eliminarCarrito.php?=<?= $datos->codigo ?>" class="btn btn-small btn-danger"><i class="fa-solid fa-eraser"></i></a>
                 </td>
             </tr>
