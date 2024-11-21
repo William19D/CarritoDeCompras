@@ -15,6 +15,8 @@ include "navbar.php";
     <?php
     global $conexion;
     include "conexion.php";
+    include "Inventario.php"; // Ensure this file contains the definition of the Inventario class
+    $inventario = new Inventario($conexion); // Instantiate the Inventario object
 
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['btnGuardar'])) {
@@ -45,11 +47,11 @@ include "navbar.php";
             <h3 class="text-center text-secondary">Detalle Producto</h3>
             <div class="mb-3">
                 <label class="form-label">ID Carro Compras:</label>
-                <input type="text" class="form-control" placeholder="ID Carro Compras" name="idCarroCompras" required>
+                <?php $inventario->generarListaDesplegableIdCarroCompras(); ?>
             </div>
             <div class="mb-3">
                 <label class="form-label">ID Producto:</label>
-                <input type="text" class="form-control" placeholder="ID Producto" name="idProducto" required>
+                <?php $inventario->generarListaDesplegableIdProducto(); ?>
             </div>
             <div class="mb-3">
                 <label class="form-label">Estado:</label>
