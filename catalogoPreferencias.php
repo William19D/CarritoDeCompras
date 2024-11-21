@@ -109,7 +109,7 @@ include "navbar.php";
                 <td><?= $datos->codigoBarras ?></td>
                 <td>
                     <a href="actualizar.php?id=<?= $datos->id ?>" class="btn btn-small btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>
-                    <a href="eliminar.php?id=<?= $datos->id ?>" class="btn btn-small btn-danger"><i class="fa-solid fa-eraser"></i></a>
+                    <a href="eliminar/eliminarCatalogo.php?id=<?= $datos->id ?>" class="btn btn-small btn-danger"><i class="fa-solid fa-eraser"></i></a>
                 </td>
             </tr>
         <?php } ?>
