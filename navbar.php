@@ -14,7 +14,7 @@
       <a class="nav-link" href="catalogoPreferencias.php">Catalogo</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link disabled" href="#">Carrito</a>
+      <a class="nav-link" href="carroCompras.php">Carrito</a>
     </li>
   </ul>
 </div>
