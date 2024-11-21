@@ -27,7 +27,7 @@
   <tbody>
     <?php
     include "conexion.php";
-    $sql = $conexion ->query("SELECT * FROM productos");
+    $sql = $conexion ->query("SELECT * FROM producto");
     while($datos = $sql-> fetch_object()){?>
   <tr>
       <th scope="row"><?= $datos->idProducto ?></th>
