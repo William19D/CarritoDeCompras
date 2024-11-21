@@ -10,6 +10,33 @@
 <body>
 <?php
 include "navbar.php";
+include "conexion.php";
+include "Inventario.php";
+
+$productos = new Inventario($conexion);
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['btnGuardar'])) {
+    $codigo = $_POST['codigo'];
+    $fecha = $_POST['fecha'];
+    $hora = $_POST['hora'];
+    $estado = $_POST['estado'];
+    $observaciones = $_POST['observaciones'];
+    $descripcion = $_POST['descripcion'];
+    $detalle = $_POST['detalle'];
+    $concepto = $_POST['concepto'];
+    $impuesto = $_POST['impuesto'];
+    $subtotal = $_POST['subtotal'];
+    $total = $_POST['total'];
+
+    $sql = $conexion->prepare("INSERT INTO carroCompras (codigo, fecha, hora, estado, observaciones, descripcion, detalle, concepto, impuesto, subtotal, total) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $sql->bind_param("ssssssssddd", $codigo, $fecha, $hora, $estado, $observaciones, $descripcion, $detalle, $concepto, $impuesto, $subtotal, $total);
+
+    if ($sql->execute()) {
+        echo '<div class="alert alert-success">Carro de compras guardado exitosamente</div>';
+    } else {
+        echo '<div class="alert alert-danger">Error al guardar el carro de compras</div>';
+    }
+}
 ?>
 <div class="container-fluid row">
     <?php
@@ -69,7 +96,7 @@ include "navbar.php";
             </div>
             <div class="mb-3">
                 <label class="form-label">Detalle:</label>
-                <textarea class="form-control" placeholder="Detalle" name="detalle"></textarea>
+                <?php $productos->generarListaDesplegable(); ?>
             </div>
             <div class="mb-3">
                 <label class="form-label">Concepto:</label>
