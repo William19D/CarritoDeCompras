@@ -1,6 +1,7 @@
 <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
 <div class="container-fluid">
   <ul class="navbar-nav">
+
     <li class="nav-item">
       <a class="nav-link active" href="index.php">Inicio</a>
     </li>
@@ -19,6 +20,7 @@
       <li class="nav-item">
           <a class="nav-link" href="detalleproducto.php">Detalle</a>
       </li>
+
   </ul>
 </div>
 </nav>

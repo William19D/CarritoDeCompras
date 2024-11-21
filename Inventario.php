@@ -32,5 +32,14 @@ class Inventario {
         }
         echo '</select>';
     }
+
+    public function generarListaDesplegableIdCarroCompras() {
+        $sql = $this->conexion->query("SELECT id FROM carrocompras");
+        echo '<select class="form-control" name="idCarroCompras">';
+        while ($row = $sql->fetch_assoc()) {
+            echo '<option value="' . $row['id'] . '">' . $row['id'] . '</option>';
+        }
+        echo '</select>';
+    }
 }
 ?>
