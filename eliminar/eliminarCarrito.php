@@ -2,7 +2,7 @@
       include "../conexion.php";
       if(!empty($_GET["id"])){
             $id = $_GET["id"];
-            $sql= $conexion->query("DELETE FROM carrocompras WHERE id=$id");
+            $sql= $conexion->query("DELETE FROM carrocompras WHERE codigo =$id");
             if($sql ==1){
                   header("Location: ../index.php");
             }else{

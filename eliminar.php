@@ -1,5 +1,6 @@
 <?php
       include "conexion.php";
+      include "navbar.php";
       if(!empty($_GET["id"])){
             $id = $_GET["id"];
             $sql= $conexion->query("DELETE FROM producto WHERE id=$id");
