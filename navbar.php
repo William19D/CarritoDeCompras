@@ -16,6 +16,9 @@
     <li class="nav-item">
       <a class="nav-link" href="carroCompras.php">Carrito</a>
     </li>
+      <li class="nav-item">
+          <a class="nav-link" href="detalleproducto.php">Detalle</a>
+      </li>
   </ul>
 </div>
 </nav>
