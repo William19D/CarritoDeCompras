@@ -11,7 +11,10 @@
       <a class="nav-link" href="ciudadano.php">Ciudadano</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link disabled" href="#">Disabled</a>
+      <a class="nav-link disabled" href="">Categorias</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#">Carrito</a>
     </li>
   </ul>
 </div>
