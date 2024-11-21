@@ -1,8 +1,6 @@
 <?php
 
 $conexion=new mysqli("localhost","root","","carritocomprasdb");
-$conexion->set_charset("utf8")
-
-
+$conexion->set_charset("utf8");
 
 ?>
