@@ -16,6 +16,7 @@ include "navbar.php";
     global $conexion;
     include "conexion.php";
 
+
     if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['btnGuardar'])) {
         $idCarroCompras = $_POST['idCarroCompras'];
         $idProducto = $_POST['idProducto'];
@@ -122,8 +123,8 @@ include "navbar.php";
                 <td><?= $datos->fechaEntrega ?></td>
                 <td><?= $datos->fechaPrestamo ?></td>
                 <td>
-                    <a href="actualizarDetalleProducto.php?id=<?= $datos->id ?>" class="btn btn-small btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>
-                    <a href="eliminar/eliminarDetalleProducto.php?id=<?= $datos->id ?>" class="btn btn-small btn-danger"><i class="fa-solid fa-eraser"></i></a>
+                    <a href="actualizarDetalle.php?id=<?= $datos->id ?>" class="btn btn-small btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a href="eliminar/eliminarDetalle.php?id=<?= $datos->id ?>" class="btn btn-small btn-danger"><i class="fa-solid fa-eraser"></i></a>
                 </td>
             </tr>
         <?php } ?>

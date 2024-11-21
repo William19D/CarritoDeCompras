@@ -1,4 +1,5 @@
 <?php
+include "navbar.php";
 include "conexion.php";
 
 // Verificamos si se ha pasado el ID como parámetro en la URL
@@ -60,9 +61,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['btnActualizar'])) {
     <title>Actualizar Ciudadano</title>
     </head>
 <body>
-<?php
-include "navbar.php";
-?>
 <div class="container p-5">
     <h3 class="text-center text-secondary">Actualizar Ciudadano</h3>
     <form method="POST">
