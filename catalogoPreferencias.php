@@ -121,7 +121,7 @@ $sql = $conexion->query("SELECT id, codigo, nombre, descripcion, cantidad, estad
             <td><?= $datos->idProducto ?></td>
             <td><?= $datos->idCiudadano ?></td>
             <td>
-                <a href="actualizarCatalogo.php?id=<?= $datos->id ?>" class="btn btn-small btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>
+                <a href="actualizar/actualizarCatalogo.php?id=<?= $datos->id ?>" class="btn btn-small btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>
                 <a href="eliminar/eliminarCatalogo.php?id=<?= $datos->id ?>" class="btn btn-small btn-danger"><i class="fa-solid fa-eraser"></i></a>
             </td>
         </tr>

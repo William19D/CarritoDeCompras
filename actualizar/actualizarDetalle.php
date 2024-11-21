@@ -1,5 +1,6 @@
 <?php
-include "conexion.php";
+
+include "../conexion.php";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['btnActualizar'])) {
     // Recoge los valores del formulario
@@ -23,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['btnActualizar'])) {
     if ($sql->execute()) {
         echo '<div class="alert alert-success">Detalle actualizado exitosamente.</div>';
         // Opcional: Redirigir a una página de éxito o detalles actualizados
-        // header("Location: detalleProducto.php");
+         header("location: ../detalleProducto.php");
     } else {
         echo '<div class="alert alert-danger">Error al actualizar el detalle.</div>';
     }
@@ -45,7 +46,7 @@ $detalle = $sql->fetch_object();
     <title>Actualizar Detalle Producto</title>
 </head>
 <body>
-<?php include "navbar.php"; ?>
+<?php include "../navbar.php"; ?>
 
 <div class="container-fluid row">
     <form class="col-4 p-3" method="POST">

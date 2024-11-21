@@ -1,5 +1,6 @@
 <?php
-include "conexion.php";
+
+include "../conexion.php";
 
 // Verificamos si se ha pasado el ID como parámetro en la URL
 if (isset($_GET["id"])) {
@@ -42,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['btnActualizar'])) {
     // Ejecutar la consulta
     if ($updateSQL->execute()) {
         echo '<div class="alert alert-success">Producto actualizado exitosamente</div>';
-        header("Location: productos.php");  // Redirige a la lista de productos después de la actualización
+        header("Location: ../index.php");  // Redirige a la lista de productos después de la actualización
     } else {
         echo '<div class="alert alert-danger">Error al actualizar el producto: ' . $conexion->error . '</div>';
     }
@@ -59,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['btnActualizar'])) {
     <title>Actualizar Producto</title>
 </head>
 <body>
-<?php include "navbar.php"; ?>
+<?php include "../navbar.php"; ?>
 
 <div class="container-fluid row">
     <form class="col-4 p-3 m-auto" method="POST">

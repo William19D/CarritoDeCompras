@@ -1,5 +1,9 @@
 <?php
-include "conexion.php";
+global $conexion;
+include "../Inventario.php";
+include "../conexion.php";
+
+$inventario = new Inventario($conexion);
 
 // Verificamos si se ha pasado el ID como parámetro en la URL
 if (isset($_GET["id"])) {
@@ -43,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['btnActualizar'])) {
     // Ejecutar la consulta
     if ($updateSQL->execute()) {
         echo '<div class="alert alert-success">Carro de compras actualizado exitosamente</div>';
-        header("Location: carroCompras.php");  // Redirige a la lista de carros de compras después de la actualización
+        header("Location: ../carroCompras.php");  // Redirige a la lista de carros de compras después de la actualización
     } else {
         echo '<div class="alert alert-danger">Error al actualizar el carro de compras: ' . $conexion->error . '</div>';
     }
@@ -60,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['btnActualizar'])) {
     <title>Actualizar Carro de Compras</title>
 </head>
 <body>
-<?php include "navbar.php"; ?>
+<?php include "../navbar.php"; ?>
 
 <div class="container-fluid row">
     <form class="col-4 p-3 m-auto" method="POST">
@@ -68,7 +72,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['btnActualizar'])) {
             <h3 class="text-center text-secondary">Actualizar Carro de Compras</h3>
             <div class="mb-3">
                 <label class="form-label">ID Ciudadano:</label>
-                <input type="text" class="form-control" name="idCiudadano" value="<?= $datos->idCiudadano ?>" required>
+                <?php
+                $inventario->generarListaDesplegableIdCiudadano();
+                ?>
             </div>
             <div class="mb-3">
                 <label class="form-label">Código:</label>

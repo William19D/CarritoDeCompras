@@ -1,6 +1,6 @@
 <?php
-include "navbar.php";
-include "conexion.php";
+include "../navbar.php";
+include "../conexion.php";
 
 // Verificamos si se ha pasado el ID como parámetro en la URL
 if (!isset($_GET['id']) || empty($_GET['id'])) {

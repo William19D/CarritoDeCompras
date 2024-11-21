@@ -54,8 +54,8 @@ $sql = $conexion->query("SELECT id, codigo, nombre, categoriaPrincipal, categori
             <td><?= $datos->garantia ?></td>
             <td><?= $datos->estado ?></td>
             <td>
-                <a href="actualizarProducto.php?id=<?= $datos->id ?>" class="btn btn-small btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>
-                <a href="eliminar.php?id=<?= $datos->id ?>" class="btn btn-small btn-danger"><i class="fa-solid fa-eraser"></i></a>
+                <a href="actualizar/actualizarProducto.php?id=<?= $datos->id ?>" class="btn btn-small btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>
+                <a href="eliminar/eliminarProducto.php?id=<?= $datos->id ?>" class="btn btn-small btn-danger"><i class="fa-solid fa-eraser"></i></a>
             </td>
         </tr>
     <?php } ?>
