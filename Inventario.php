@@ -7,10 +7,10 @@ class Inventario {
     }
 
     public function generarListaDesplegable() {
-        $sql = $this->conexion->query("SELECT nombre FROM producto");
-        echo '<select class="form-control" name="nombre">';
+        $sql = $this->conexion->query("SELECT concepto FROM detalleproducto");
+        echo '<select class="form-control" name="detalle">';
         while ($row = $sql->fetch_assoc()) {
-            echo '<option value="' . $row['nombre'] . '">' . $row['nombre'] . '</option>';
+            echo '<option value="' . $row['concepto'] . '">' . $row['concepto'] . '</option>';
         }
         echo '</select>';
     }
