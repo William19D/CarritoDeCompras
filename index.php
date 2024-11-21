@@ -10,6 +10,8 @@
 <body>
  
 <?php
+include "navbar.php";
+include "conexion.php";
 $sql = $conexion->query("SELECT id, codigo, nombre, categoriaPrincipal, categoriaSecundaria, descripcion, precio, stock, detalle, caracteristicas, garantia, estado FROM producto");
 ?>
 
