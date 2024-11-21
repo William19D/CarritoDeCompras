@@ -8,7 +8,7 @@
       <a class="nav-link" href="productos.php">Produtos</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="cliente.php">Cliente</a>
+      <a class="nav-link" href="ciudadano.php">Ciudadano</a>
     </li>
     <li class="nav-item">
       <a class="nav-link disabled" href="#">Disabled</a>
